@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FAQ</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet"  href="C:\FAQ\style.css">
+</head>
+<body>
+<div class="container" >
+	<form class="example" action="action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+		<h2>Frequently Asked Questions(FAQs)</h2>
+	<div class="accordion" class="whole">
+		<div class="icon"></div>
+			<h5>1.	How do the One Drive Data Permission from source & new One Drive folder from destination works?</h5>
+		
+	</div>
+	<div class="panel" class="whole">
+		<p>
+			<ul type="circle">
+				<li>From Source - One Drive Shared with you permission works in two method: </li>
+				<ul type="square">
+					<li>Users shared to you in link manner – we cannot retain those shares from the migration tool, you need to request the Owner to re share the  folder or files</li>
+					<li>Users Shared to you either folder/files in advance access share  manner  – permission will restored as same once the permission delta sync completed by the tool </li>
+					<li>If partial users migrated to new tenant can they use new one drive – this vary between India & North America </li>
+					<ul type="disc">
+						<li>For North America we advise the users to use  old one drive due to delta sync will initiated during the final phase which over right the new file in the destination if they were using the destination  one drive </li>
+						<li>For India users cannot login into their one drive are any of the other service due to the upn changes immediately in the source when they destination with UPN </li>
+						<li>For India users – people who migrated their shared link will break automatically to the invited participants due to UPN change </li>
+						<li>Once all  the users migrated permission delta sync will initiated to regain the permission for those folder and users </li>
+					</ul>
+				</ul>
+			</ul>
+		</p>
+	</div>
+	<div class="accordion" class="whole">
+		<div class="icon"></div>
+			<h5>2.	Does the Teams chat folder content migrate cross-tenant and other functions?</h5>
+		
+	</div>
+	<div class="panel" class="whole">
+		<p>
+			<ul type="circle">
+				<li>At present No, the Teams chat folder content does not migrate cross-tenant. But Birlasoft team crossing checking with the new features enabled from Bit titian to see they address this solution </li>
+				<ul type="square">
+					<li>All External Teams permission and internal Teams which you shared or received invitation from your  customer or vendors will be discarded , you need to request them again  depending on your case , if you shared you need to re share </li>
+					<li>Partially  migrated users to tvsscs , were have some challenge to chat  with tvslsl internal organization due to those users are still not migrated but users can send the invite for them and chat or call within the meeting invite </li>
+					<li>Users can communicate to external users no issues if any issue reported  we should too able to adjust their co-existence mode type for each individual depends on case to case</li>
+					<li>Groups and channels will be restored but it may sync depends on the STM</li>
+				</ul>
+			</ul>
+		</p>
+		
+	</div>
+	<div class="accordion" class="whole">
+		<div class="icon"></div>
+			<h5>3.	Does the Share Point Site access able for existing customer & internal users were do not need to permit them again?</h5>
+		
+	</div>
+	<div class="panel" class="whole">
+		<p>
+			<ul type="circle">
+				<li>Yes , But url domain information alone need to inform them as following ex : From <a href="https://tvslogistics.sharepoint.com">https://tvslogistics.sharepoint.com</a> to <a href="https://tvscrm.sharepoint.com">https://tvscrm.sharepoint.com  </a>remaining  suffix site directory are remain same </li>
+				<li>All internal & external permission will be restored based on delta sync as soon as the upn information is updated in the destination</li>
+				<li>Any Custom Web page won’t be able to restore it</li>
+				<li>Any workflow from SharePoint designer 2010 will be removed as per  MS there is no more support for this features , 2013 workflow will restored along the migration tool</li>
+				<li>Any add on apps won’t able to restore it , you need to re –add them if there is any integration in place with the external & MS apps</li>
+			</ul>
+		</p>
+	</div>
+	<div class="accordion" class="whole">
+		<div class="icon"></div>
+			<h5>4.	Email Setup and recipients functions? </h5>
+		
+	</div>
+	<div class="panel" class="whole">
+		<p>
+			<ul type="circle">
+				<li>All users recipients from and to previous  mails related to internal domain users emails  will still remain same after   migration  due to partial migrations. </li>
+				<li>Any Mail Box rules have been created by users we can export the rules and import the rule but depends on case to case ,  external users rules you can import them no issues , any internal users rules you can still import but mail rules you need to modify to their new contact information depends on when the migrated</li>
+				<li>All Signature will be restored</li>
+				<li>Calendar , To-do Task , will be  restored </li>
+				<li>Shared Calendar need to be re- initiate either by  end users for their calendar  or  admin can do it in bulk 
+				</li>
+				<li>Please ensure you back up the contacts and move to  phone /Sim storage or move to new email ID , before you discard your old account from your phone</li>
+			</ul>
+		</p>
+	</div>
+	<div class="accordion" class="whole">
+		<div class="icon"></div>
+			<h5>5.	Does the Power Platform data & Apps will transferred automatically and permission assigned? </h5>
+		
+	</div>
+	<div class="panel" class="whole">
+		<p><ul type="circle">
+			<li>All the Power BI, Power Apps Power Automate , Source mapping and permission reassignment is completely manual activity – Individual Entities Developer need to collect all the inventory list and migrate them before or  after the users migration and re granted the users end apps at the earliest </li>
+			<li>If user access from  phone and save favorites please refresh with new credentials it should bring up all the apps and reports if the developer permitted you the apps back again in the destination</li>
+		</ul></p>
+	</div>
+	<div class="accordion" class="whole">
+		<div class="icon"></div>
+			<h5>6.	Why my Stream / Planner Data are missing? </h5>
+		
+	</div>
+	<div class="panel" class="whole">
+		<p>
+			<ul type="circle">
+				<li>Stream & Planner data transferred worked based on the Group level permission if any of the user not migrated from the group data transfer will fail – we have a separate tool for this once the users all migrated we will run the sync and users should see their data after that. </li>
+				<li>We are trying to push and testing on  the partial migration for the planner data which we are evaluating with the tool , if that works we can move the planned data as soon as we moved the users mailboxes  those who have planners will move their  planner information as well. </li>
+			</ul>
+		</p>
+	</div>
+		<div class="accordion"class="whole">
+		<div class="icon"></div>
+			<h5>7.	Meeting facilitator/organizer unable to begin the meeting.</h5>
+		
+	</div>
+	<div class="panel"class="whole">
+		<p>
+			<ul type="disc">
+				<li>Invitation to the meeting created with the old ID and the moderator attempting to join from the New ID. </li>
+				<li>Sign in with the old username under @tvslogisctics.onmicrosoft.com and cancel all meetings.</li>
+				<li>Recreate all the meeting using new ID’s.</li>
+			</ul>
+			<img src="img/i1.png" style="width: 100%">
+		</p>
+	</div>
+	<div class="accordion"class="whole">
+		<div class="icon"></div>
+			<h5>8.	Prior to the migration, I can chat with my client now, I couldn't.</h5>
+		
+	</div>
+	<div class="panel"class="whole">
+		<p>
+			<ul type="circle">
+				<li>Please ask the customer/External Contact to whitelist our new domain @tvsscs.com</li>
+			</ul>
+		</p>
+	</div>
+	<div class="accordion"class="whole">
+		<div class="icon"></div>
+			<h5>9.	Shared Mailbox not accessible.</h5>
+		
+	</div>
+	<div class="panel"class="whole">
+		<p>
+			<ul type="circle">
+				<li>Check  on web portal if able to access the shared mailbox, If the shared Mailbox is accessible goahead and add in outlook. Any trouble via OWA, report back to <a href="support.migration@tvslsl.com">support.migration@tvslsl.com</a></li>
+			</ul>
+		</p>
+	</div>
+	<div class="accordion"class="whole">
+		<div class="icon"></div>
+			<h5>10.	Cannot access MS Stream Recorded/Video.</h5>
+		
+	</div>
+	<div class="panel"class="whole">
+		<p>
+			<ul type="circle">
+				<li>It looks like you are attempting to access the recording via the old link.</li>
+				<li>Please note that we have migrated the video of the old tenant to new tenant so the link will not work.</li>
+				<ul type="circle"><li>Follow the steps below to navigate to the video.</li>
+					<ul type="disc">
+						<li>Log on to <a href="https://portal.office.com/">https://portal.office.com/</a></li>
+						<li>Click APP ICON/Follow the below screen</li>
+					</ul></ul>
+			</ul>
+			<img src="img/i2.png" style="width: 100%">
+			<p>Search for the video as given below and use share Icon to share it with others</p>
+			<img src="img/i3.png" style="width: 100%">
+		</p>
+	</div>
+	<div class="accordion"class="whole">
+		<div class="icon"></div>
+			<h5>11.	Problem: When we tried to cancel the @tvslsl.com meeting invite, the cancellation will not appear in the @tvsscs.com calendar.</h5>
+		
+	</div>
+	<div class="panel"class="whole">
+		<p>
+			<ul type="circle">
+				<li>Workaround: advise the user to update the new email ID prior to sending the cancel request.</li>
+				<li>Eg below.<a href="SDM.IT@tvslsl.com"> SDM.IT@tvslsl.com</a> must be changed to <a href="sdm.it@tvsscs.com">sdm.it@tvsscs.com</a>  before sending a cancellation request.</li>
+			</ul>
+			<img src="img/i4.png" style="width: 100%">
+		</p>
+	</div>
+</div>
+<script >
+	var acc=document.getElementsByClassName('accordion');
+var i;
+var len =acc.length;
+console.log("inside if");
+for(i=0;i<len;i++){
+	console.log("inside if");
+acc[i].addEventListener('click', function(){
+	this.classList.toggle('active');
+	var panel=this.nextElementSibling;
+	if(panel.style.maxHeight){
+		panel.style.maxHeight=null;
+
+	}
+	else{
+		panel.style.maxHeight=panel.scrollHeight +'px';
+	}
+})
+}
+
+let filterInput=document.getElementById('filterInput');
+filterInput.addEventListener('keyup',filter);
+function filter(){
+	let filterValue=document.getElementById('filterInput').value.toUpperCase();
+	let whole=document.getElementById('container');
+	let l=whole.querySelectorAll('div.whole');
+	for(let i=0;i<l.length;i++){
+		let a=l[i].getElementsByTagName('a')[0];
+		if(a.innerHTML.toUpperCase().indexOf(filterValue)>-1){
+			l[i].style.display='';
+		}
+		else{
+			l[i].style.display='none';
+		}
+	}
+}
+</script>
+</body>
+</html>
